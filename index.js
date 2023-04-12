@@ -23,7 +23,7 @@ app.set("trust proxy", true);
 // your first API endpoint...
 app.get("/api/whoami", function (req, res) {
   res.json({
-    ipadress: req.headers["x-forwarded-for"] || req.socket.remoteAddress,
+    ipadress: req.headers["x-forwarded-for"],
     language: req.headers["accept-language"],
     software: req.headers["user-agent"],
   });
